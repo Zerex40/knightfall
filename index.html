@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Absolution: Knightfall</title>
-<meta name="description" content="Absolution: Knightfall is a dark fantasy tactical RPG, episode one of a nine-part anthology. Free demo in late November 2026.">
+<meta name="description" content="Absolution: Knightfall is a dark fantasy tactical RPG, episode one of a nine-part anthology. Free demo on 15 November 2026.">
 <meta name="theme-color" content="#0b0b0e">
 <link rel="icon" href="assets/ink_drop_indicator.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,22 +90,10 @@ img.px{image-rendering:pixelated}
   filter:drop-shadow(0 0 1px #000) drop-shadow(0 0 4px rgba(56,219,209,.8)) drop-shadow(0 0 22px rgba(56,219,209,.32)) drop-shadow(0 16px 24px rgba(0,0,0,.75));
   animation:logoIn 1.6s cubic-bezier(.2,.7,.2,1) both}
 @keyframes logoIn{from{opacity:0;transform:translateY(10px) scale(.985);filter:blur(6px)}}
-.code{margin:1.7rem auto 0;max-width:34rem}
-.code [hidden]{display:none!important}
-.code-label{display:block;margin:0 0 .6rem;font-family:var(--f-pixel);font-size:.85rem;letter-spacing:.24em;text-transform:uppercase;color:#d6b871;text-shadow:0 2px 6px #000}
-.code-row{display:flex;flex-wrap:wrap;gap:.4rem .5rem;align-items:center;justify-content:center}
-.code-in{width:min(17.5rem,100%);height:3.1rem;padding:0 1rem;font-family:var(--f-pixel);font-size:1.2rem;letter-spacing:.16em;text-align:center;text-transform:uppercase;
-  color:#f2efe6;background:rgba(5,5,7,.74);border:2px solid var(--stone);border-radius:0;box-shadow:inset 0 0 0 2px #0b0b0e,0 8px 20px rgba(0,0,0,.5);outline:none;transition:border-color .2s,box-shadow .2s}
-.code-in::placeholder{color:#6d6552}
-.code-in:focus{border-color:#38dbd1;box-shadow:inset 0 0 0 2px #0b0b0e,0 0 0 3px rgba(56,219,209,.25),0 8px 20px rgba(0,0,0,.5)}
-.code .ink-btn{min-width:10rem;min-height:3.4rem;padding:.6rem 2.6rem;font-size:1.3rem}
-.code-msg{min-height:1.5em;margin:.7rem auto 0;max-width:30rem;font-family:var(--f-pixel);font-size:.9rem;letter-spacing:.05em;line-height:1.5;color:#e9dfc6;text-shadow:0 2px 6px #000}
-.code-msg.bad{color:#ff9a9e}
-.code-msg.ok{color:#8af3e6}
-.code.shake .code-in{animation:codeShake .38s}
-@keyframes codeShake{20%,60%{transform:translateX(-6px)}40%,80%{transform:translateX(6px)}}
-.code-dl{margin-top:.5rem}
-@media (prefers-reduced-motion: reduce){.code.shake .code-in{animation:none}}
+.news{margin:1.7rem auto 0;max-width:34rem}
+.news-label{margin:0 0 .5rem;font-family:var(--f-pixel);font-size:.85rem;letter-spacing:.24em;text-transform:uppercase;color:#d6b871;text-shadow:0 2px 6px #000}
+.news-date{margin:0;font-family:var(--f-display);font-size:clamp(1.6rem,4vw,2.3rem);line-height:1.1;color:#e9dfc6;text-shadow:0 0 18px rgba(56,219,209,.35),0 2px 8px #000}
+.news-text{margin:.6rem auto 0;max-width:30rem;font-family:var(--f-pixel);font-size:.9rem;letter-spacing:.05em;line-height:1.5;color:#e9dfc6;text-shadow:0 2px 6px #000}
 .lede{max-width:36rem;margin:1.4rem auto 0;font-size:clamp(1.1rem,1.8vw,1.3rem);color:#e9dfc6;text-shadow:0 2px 12px rgba(0,0,0,.8)}
 .actions{display:flex;flex-wrap:wrap;gap:.6rem 1rem;justify-content:center;align-items:center;margin-top:2.2rem}
 .chip{font-family:var(--f-pixel);font-size:.95rem;letter-spacing:.12em;color:#d6b871;text-shadow:0 2px 6px #000}
@@ -419,28 +407,17 @@ kbd{display:inline-grid;place-items:center;min-width:1.9em;height:1.9em;margin:0
     <div class="hero-inner">
       <p class="kicker">Episode I of IX</p>
       <h1 class="logo"><img src="assets/logo.png" width="450" height="300" alt="Absolution: Knightfall"></h1>
-      <form class="code" id="codeForm" autocomplete="off" novalidate>
-        <label class="code-label" for="codeIn">Have a demo code?</label>
-        <div class="code-row">
-          <input class="code-in" id="codeIn" type="text" maxlength="20" spellcheck="false" autocapitalize="characters" placeholder="XXXX-XXXX-XXXX" aria-describedby="codeMsg">
-          <button class="ink-btn" type="submit" data-ink="blot">Unlock</button>
-        </div>
-        <p class="code-msg" id="codeMsg" aria-live="polite"></p>
-        <a class="ink-btn code-dl" id="codeDl" href="#" data-ink="blot" hidden>Download the demo</a>
-        <div hidden>
-          <p data-msg="empty">Type in the code you were given.</p>
-          <p data-msg="bad">That code doesn't open anything. Check it and try again.</p>
-          <p data-msg="wait">Code accepted. The demo isn't released yet, but this code will unlock the download right here as soon as it is.</p>
-          <p data-msg="ready">Code accepted. The demo is yours.</p>
-          <p data-msg="started">Code accepted. The demo is yours - your download has started. If it didn't, use the button below.</p>
-        </div>
-      </form>
+      <div class="news">
+        <p class="news-label">The private tests have wrapped up</p>
+        <p class="news-date">Free demo · 15 November 2026</p>
+        <p class="news-text">Thank you to everyone who played and reported. The demo is on its way to itch.io.</p>
+      </div>
       <p class="lede">The Order has fallen. Another must rise.</p>
       <div class="actions">
         <a class="ink-btn discord" href="#" data-ink="blot">Join the Discord</a>
         <a class="ink-btn" href="#f-company" data-ink="blot">Who Stands With You</a>
       </div>
-      <p class="chip">Closed test</p>
+      <p class="chip">Coming 15 November</p>
     </div>
     <canvas class="ink-seam" id="heroSeam" aria-hidden="true"></canvas>
     <a class="scrolldown" href="#f-fall" aria-label="Scroll to the story"></a>
@@ -512,13 +489,13 @@ kbd{display:inline-grid;place-items:center;min-width:1.9em;height:1.9em;margin:0
         <div>
           <p class="kicker">The demo:</p>
           <p class="big">Play it this November.</p>
-          <p>The free demo of Knightfall arrives on itch.io in late November 2026. Follow the page and you'll hear the day it's up.</p>
+          <p>The free demo of Knightfall arrives on itch.io on 15 November 2026. Follow the page and you'll hear the moment it's up.</p>
           <div class="actions"><a class="ink-btn itch" href="#" data-ink="blot">Follow on itch.io</a></div>
         </div>
         <dl class="plaques">
           <div class="plaque"><dt>Genre</dt><dd>Dark fantasy tactical RPG</dd></div>
           <div class="plaque"><dt>Episode</dt><dd>I of IX · Knightfall</dd></div>
-          <div class="plaque"><dt>Demo</dt><dd>Free, late November 2026</dd></div>
+          <div class="plaque"><dt>Demo</dt><dd>Free, 15 November 2026</dd></div>
           <div class="plaque"><dt>Where</dt><dd>itch.io</dd></div>
         </dl>
       </div>
@@ -652,7 +629,7 @@ kbd{display:inline-grid;place-items:center;min-width:1.9em;height:1.9em;margin:0
       <div class="text">
         <h3>Questions</h3>
         <dl class="notes">
-          <dt>When can I play it?</dt><dd>The free demo comes out in late November 2026.</dd>
+          <dt>When can I play it?</dt><dd>The free demo comes out on 15 November 2026.</dd>
           <dt>What kind of game is it?</dt><dd>A turn-based tactical RPG. You explore, make friends, make enemies, and do your best to outlive them.</dd>
           <dt>Is it one game?</dt><dd>Knightfall is the first episode of Absolution, an anthology in nine parts. Each episode stands on its own and features a unique protagonist.</dd>
           <dt>Where will the demo be?</dt><dd>On itch.io. Follow the page to hear when the demo is up. Later on the demo will be released on Steam as well.</dd>
@@ -682,53 +659,6 @@ const CONTACT_EMAIL = atob("bW9jLmxpYW1nQG5pYW14ZXJleg==").split("").reverse().j
 /* -------------------------------- */
 
 document.querySelectorAll('.itch').forEach(a=>{a.href=ITCH_URL;a.target='_blank';a.rel='noopener';});
-const DEMO_SALT = "a15f123ab2552417c17a1f0dec5ba3d6";
-const DEMO_CODES = [{"i":"4914e67dac327939ac52","c":"9kmrw9CvP37WL8YbzB07aM8Czkv/nnQAuu4k1WMPVui84XXk32ciNBQW7XKfa9X8iPE7/hg+fYcGQy6kdGC5d0e/E0QrpZ21odYS5OY2wMwNwZGStzVDIhqCOpZzlF79F0aAUK9q/ZlmqTCXtPIfkd4lXcyR4Bgm6TY="},{"i":"d966a68fe13793b4d105","c":"zkqeWAhApa0wAHKKFRtG8RHUv2GH0/KfN3zCNQuZxxXysJe9B1mQ1ZascQil3F+z+9bdIKbLF9Zpi+lYpvDUdRYKH7QyaVKEhiELPoeRGeoFzfvyl0S5AnwjbPB0rGLfETocLdCv7Vw5+gxDJB9UfE2dSNPftKURjCY="},{"i":"a06b8816fa204db1fcf1","c":"GV24n9NodQ+nI7hCqBomeYS/UnGFuEigJSD7LeQG0gbm8Iye0Pq1lGQ4Tp23Y9RMfOAfueACmqWL6xD1VvPtniwUQiIuW7C00Y8FVwbKVKKADVySd4bP8ZsUKLRgonVFVkpk0q5Nlnk+lS8rp449oevtu7cHvEe5aJs="},{"i":"050367b7646ae9df0511","c":"ZQU1MD4PBYsBUVV9a1V6RidBVAU2s+iV+ZL91ZcebwGhKyNaLc3sgtDzybDBlRCC0c84azUlqL7qXwscKWjmm7ZrIgH8EiPGsMiJxBBlzjflsvhdqBohWzg7Ce1cmvdKWV9RLiPdseXPhtNQEv/nbVUEXvYDKJTGgW4="},{"i":"e17c57553a1a3244822d","c":"i+AdJjrBPqIvDW2x7y9lfVNhYvlHT4PHCMsHWHrzrGXnfQSrTVoGU1iVRWdAo4XETSnp7gtUioQQXUBMxBJvWGw8DQiOuxcMKaWqvuVG6I2Uks3scxy9IvUEFWvqytbr0mxcVcQ/yUe3TylaAAzkmqGhmSC6b4zYSHI="},{"i":"2dc7e546852f76c174c8","c":"D2oakOqK9CUBioirEEOLf5fpsz5p0Sx2jfRp/0zZZEG2IjRFS1BLTTmCNwSN3Mb20pFsCGxok3950eb/9N78PseKapjyy+/0oLv9sBKqJ8zZ146D/KFrzyuBZU+8A6Ry7Zy9kjxOTqCPqJsGHCB3WeM9vQr7+JaA3kI="},{"i":"d18ecc57afd86e70eaa7","c":"Mfh7dGkEUEBFExaFrLyzvh+Q+o8tB6icv7Yr2xzmBkVi1eIVl7BA3aY2bH9cxMoh3icfxTl42PGQzGasmYegVZ0Zxxvxp1OyxRAqEFp2LEpfkUumR/D4OI3IH1WLOTxRlE/PHNjDrIQES7Q59QOFSJMi0WoHzPdbLTs="},{"i":"86e652671ce38f71b0ca","c":"inSeRT0Rb/QJGV3AHO4JbyNzFrM/+94cA/poeUNbXEnbZMMFXdYZL87PIl1ApZ9w4XTV8l2zRowFAmoYmY5Q5ckRepDWU5ytOwkxLLliLDbqiEpC5NyOlkLWzAL6/fyHldXR+pCcFzl/jITUm/ZmBni4SFFPTrUnO7Y="},{"i":"97f189988b3177cad9d8","c":"tnt3rE0mkOC86hRSC8VUZKD/W/BvGdHsqRedUWQYo5W7/HnPxiUdv3Qdpgcx07n0Gyoy0wBSEc4TYVVMb0NPbImg7IaYdKrwVw4CKajzLCuKxwRgaFiK8wrDapT8UEUPbeafL4sQWs6AiRaTj9FtAh3pU+wOCDetkm0="},{"i":"9f598c92761ea5683dd5","c":"Ya21+c0kBHqI3fb1vozTh3/fd3HslOYa9DOIlyP1VgX5zGd2i05Jfayd+jk5y1AM01FbtyYne/KCeeOl3dvY3zFIBqEwIMDjCp4c0k444km8ykqQs/sFySiHEaFVR5EQQNAkIk0/udBEi8UT8eX4uXQYw51UAs0jZV0="},{"i":"ee6251b1256934bb04f1","c":"8VCgS9NUi0W1Qm7d4/L7vqFu71nE0JHUXIlBooWKXbFPHslVO1aWZ51ISRHQLurXxve8Pdp8kPKCtFOEp7BwtVKoY3nA/O1/ugqA/8GFTpJvrhsbsZHRKW1/CHdMFKv4R7YUhiylVtmHkaIMB1evwtCWjBU1w6u9VqA="},{"i":"e50cf0ed9614cededd0a","c":"6P9N2iNsNsYHigezoS/xgjWTvqaZxRStNM72ymN6cvXAnY2S4eTmW2Cv47j5nwAoFEOyWrLhCYQh15A886A6DlyBPWpntSqsEP70NYBvm/K2nAGtJweLnianCqJp2/Ek1cbIeNogHRSd2sgEDd5XoudsOpwJir+e6dg="},{"i":"57be868724a9592afb7b","c":"4ke4c3tjotOzR2q1iUgDfTPKApJ47z6yLhQIkOyZzZBi0o9AZQXA17bOPdA3PekV18jpQlKhtVWuqxMcgCqyERJi9XRgEnREesMIYasrnUHVBOVgfkdYXhLO4HWTDZe7j9uOivOoQ6pe8Zny67T0lC9FjfZS0ZzhAPE="},{"i":"dc76fd909df23733419f","c":"zfiU8ULGDqgEA5umLUkugGGChAZ21PL38JkH3HJKfRQfkMEVYiuAcLV2ydOSbhKldui74hnxi+DSS6nXSYl59dTXa6JNfg5Qo57kWTldUdgThY+3xHMywqz6QAJ/wzUpO59/Lzx8Uar+gMqkd7V79yQyRb8SvXH855Q="},{"i":"cefc7f5a5f43dc2e775a","c":"yk5P2CwKeqBc6N43ql4/f5yU0ZbVmhIR+nvTZYhYRiOo5oVOZmFEkc8hxpOLi0doJz+yPLkotHSyOqSA72F7ZTwldswSCG6xmegH4l5I3aurFLFB/DQYGb0vtME8n0qThWNrbrpFx66m8ecgUEtDlXO9wnwTCiftS8A="},{"i":"81fa139d70e6b2c48123","c":"MBp2zkS8vbQElj2oSBbRjSrboIVVGDhj1JU8glZprXz4AQ4WsqopzHnyW64xVVSpH507rZGkrnlpALywWA4WdWvTvvW7bsJ7mX26ktllieMFh6UXDwT6SBOKHh56NNaw8rKcGLUD+oLTgZtgYiRYEvJk0xP2mjV5zxw="},{"i":"3a0e2cf65534223b2585","c":"7O/Pc9Cyw7LpkYCAKxDHQMpYjhWbDsOeJDzXULuAoB87eM3MKGnGea/db9jXj9YCn/Mou5z6QonMwshXiJvPJefQ/O7YdBe8bZW+KgmJBTV/2TJiURdhRff4owh2Stf2N6aUqxyWZf+klw96ztg+y/Xmzt4pInn0Mfs="},{"i":"338ed519e13b79f75937","c":"lq68+BbsGSpydhY2WrF8hFS43HvRoggQ3nn91ERyfIVcdpi32Old15+CBzO2b78cMr5OU106GflAQePboYa3YrO9empk80CEBi7Rdv03gzv6lFknTlvdK2/2nFjxG6q24KeVavKEIW9oBfFAmkz/7cJojH3v3pWy7to="},{"i":"aa8c3ccbb6c287d05563","c":"uwCN0phipp1DgkmrW8ErmRIbEedVAZlNJWlNNBAJaXVTxFVTT+gfU7FjS2OWh2ksLuLBwTeW9S2ulpBvvrWl2RGycYyMJbTIuPLUbXhSZxLYmvl0utet1KXnMG/z46PSidLvWbziX/r2JVNyfWHRiCxp1YeQwmmkhF0="},{"i":"4d2cf0e09a146e68b5b2","c":"5IzSidEEmPZM+pJh2KX39UdBMGkJqAedt0oBdIvi+MWy8G7ffKRV6Hvt8PgAVoRovtMYNkZZ93YIkyB64MpGK2DOhvqBIhLrRFY+yO+XUBhoW8HJ9fI2PN4EX/AIy8RbcqebUW/xk2D3DKCCJ+qDEaR+Lr4Ff3NCI6g="}];
-const SHA_K=[0x428a2f98,0x71374491,0xb5c0fbcf,0xe9b5dba5,0x3956c25b,0x59f111f1,0x923f82a4,0xab1c5ed5,0xd807aa98,0x12835b01,0x243185be,0x550c7dc3,0x72be5d74,0x80deb1fe,0x9bdc06a7,0xc19bf174,
-  0xe49b69c1,0xefbe4786,0x0fc19dc6,0x240ca1cc,0x2de92c6f,0x4a7484aa,0x5cb0a9dc,0x76f988da,0x983e5152,0xa831c66d,0xb00327c8,0xbf597fc7,0xc6e00bf3,0xd5a79147,0x06ca6351,0x14292967,
-  0x27b70a85,0x2e1b2138,0x4d2c6dfc,0x53380d13,0x650a7354,0x766a0abb,0x81c2c92e,0x92722c85,0xa2bfe8a1,0xa81a664b,0xc24b8b70,0xc76c51a3,0xd192e819,0xd6990624,0xf40e3585,0x106aa070,
-  0x19a4c116,0x1e376c08,0x2748774c,0x34b0bcb5,0x391c0cb3,0x4ed8aa4a,0x5b9cca4f,0x682e6ff3,0x748f82ee,0x78a5636f,0x84c87814,0x8cc70208,0x90befffa,0xa4506ceb,0xbef9a3f7,0xc67178f2];
-function sha256(msg){
-  const H=[0x6a09e667,0xbb67ae85,0x3c6ef372,0xa54ff53a,0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19];
-  const l=msg.length,n=((l+9+63)>>6)<<6,b=new Uint8Array(n);b.set(msg);b[l]=0x80;
-  const dv=new DataView(b.buffer);dv.setUint32(n-4,(l*8)>>>0);dv.setUint32(n-8,Math.floor(l/0x20000000));
-  const w=new Uint32Array(64),r=(x,k)=>(x>>>k)|(x<<(32-k));
-  for(let o=0;o<n;o+=64){
-    for(let i=0;i<16;i++)w[i]=dv.getUint32(o+i*4);
-    for(let i=16;i<64;i++)w[i]=(w[i-16]+(r(w[i-15],7)^r(w[i-15],18)^(w[i-15]>>>3))+w[i-7]+(r(w[i-2],17)^r(w[i-2],19)^(w[i-2]>>>10)))>>>0;
-    let [a,bb,c,d,e,f,g,h]=H;
-    for(let i=0;i<64;i++){
-      const t1=(h+(r(e,6)^r(e,11)^r(e,25))+((e&f)^(~e&g))+SHA_K[i]+w[i])>>>0,t2=((r(a,2)^r(a,13)^r(a,22))+((a&bb)^(a&c)^(bb&c)))>>>0;
-      h=g;g=f;f=e;e=(d+t1)>>>0;d=c;c=bb;bb=a;a=(t1+t2)>>>0;}
-    [a,bb,c,d,e,f,g,h].forEach((v,i)=>H[i]=(H[i]+v)>>>0);
-  }
-  const out=new Uint8Array(32),ov=new DataView(out.buffer);H.forEach((v,i)=>ov.setUint32(i*4,v));return out;
-}
-(function(){
-  const form=document.getElementById('codeForm'),input=document.getElementById('codeIn'),msg=document.getElementById('codeMsg'),dl=document.getElementById('codeDl');
-  const enc=t=>new TextEncoder().encode(t),hex=b=>[...b].map(x=>x.toString(16).padStart(2,'0')).join('');
-  const text=k=>form.querySelector(`[data-msg="${k}"]`).textContent;
-  const norm=v=>v.toUpperCase().replace(/[^A-Z0-9]/g,'');
-  function tryCode(code){
-    const id=hex(sha256(enc(DEMO_SALT+':id:'+code))).slice(0,20),e=DEMO_CODES.find(x=>x.i===id);if(!e)return null;
-    const sealed=Uint8Array.from(atob(e.c),ch=>ch.charCodeAt(0)),key=sha256(enc(DEMO_SALT+':key:'+code)),out=new Uint8Array(sealed.length);
-    for(let i=0;i<sealed.length;i+=32){const blk=new Uint8Array(36);blk.set(key);new DataView(blk.buffer).setUint32(32,i/32);const ks=sha256(blk);
-      for(let j=0;j<32&&i+j<sealed.length;j++)out[i+j]=sealed[i+j]^ks[j];}
-    try{const p=JSON.parse(new TextDecoder().decode(out));return p&&p.v===1?p:null;}catch(err){return null;}
-  }
-  function show(kind,cls){msg.textContent=text(kind);msg.className='code-msg'+(cls?' '+cls:'');}
-  function check(quiet){
-    const code=norm(input.value);dl.hidden=true;
-    if(!code){if(!quiet)show('empty','bad');return;}
-    const p=tryCode(code);
-    if(!p){if(quiet)return;show('bad','bad');form.classList.remove('shake');void form.offsetWidth;form.classList.add('shake');return;}
-    try{localStorage.setItem('kf-demo-code',code);}catch(err){}
-    input.value=code.match(/.{1,4}/g).join('-');
-    if(p.url){show(quiet?'ready':'started','ok');dl.href=p.url;dl.setAttribute('download','');dl.hidden=false;if(!quiet)location.href=p.url;}else show('wait','ok');
-  }
-  form.addEventListener('submit',e=>{e.preventDefault();check(false);});
-  try{const saved=localStorage.getItem('kf-demo-code');if(saved){input.value=saved;check(true);}}catch(err){}
-})();
 document.querySelectorAll('.discord').forEach(a=>{a.href=DISCORD_URL;a.target='_blank';a.rel='noopener';});
 ['mailLink','footMail'].forEach(id=>{const m=document.getElementById(id);m.href='mailto:'+CONTACT_EMAIL;m.textContent=CONTACT_EMAIL;});
 const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
