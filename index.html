@@ -178,6 +178,16 @@ img.px{image-rendering:pixelated}
 .demo .actions{justify-content:flex-start;margin-left:-1.2rem}
 .itch-embed{margin-top:1.8rem;max-width:552px}
 .itch-embed iframe{display:block;width:100%;max-width:552px;height:167px;border:0}
+.devlog{display:grid;grid-template-columns:1.25fr 1fr;gap:2.4rem;align-items:center;padding:clamp(2rem,4vw,3rem);
+  background:color-mix(in srgb,var(--panel) 80%,transparent);border:1px solid var(--line);
+  box-shadow:inset 0 0 0 6px var(--bg),inset 0 0 0 7px color-mix(in srgb,var(--stone) 60%,transparent)}
+.devlog .shot{display:block;border:1px solid var(--line);box-shadow:0 8px 30px rgba(0,0,0,.45)}
+.devlog .shot img{display:block;width:100%;height:auto}
+.devlog .big{margin:0 0 .9rem;font-family:var(--f-display);font-size:clamp(1.9rem,4vw,2.8rem);line-height:1.04}
+.devlog .actions{justify-content:flex-start;margin-left:-1.2rem}
+.devlog .stories{margin:1.4rem 0 0;padding:0;list-style:none;display:grid;gap:.5rem}
+.devlog .stories a{font-family:var(--f-pixel);font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px dashed var(--line)}
+.devlog .stories a:hover{color:#e9dfc6}
 .plaques{display:grid;gap:0;margin:0}
 .plaque{display:grid;grid-template-columns:7.5rem 1fr;align-items:baseline;gap:1rem;padding:.8rem 0;border-bottom:1px dashed var(--line)}
 .plaque:last-child{border-bottom:0}
@@ -199,7 +209,8 @@ img.px{image-rendering:pixelated}
   .dbox{height:auto;min-height:148px;padding-top:.9rem}
   .dtext{min-height:4.2em}
 }
-@media (max-width:560px){.plaque{grid-template-columns:1fr;gap:.1rem}.ink-btn{min-width:13rem;padding:.6rem 2.4rem;font-size:1.3rem}.demo .actions{margin-left:0}}
+@media (max-width:860px){.devlog{grid-template-columns:1fr}}
+@media (max-width:560px){.plaque{grid-template-columns:1fr;gap:.1rem}.ink-btn{min-width:13rem;padding:.6rem 2.4rem;font-size:1.3rem}.demo .actions,.devlog .actions{margin-left:0}}
 @media (prefers-reduced-motion: reduce){.hero .scene-wrap,.logo img,.scrolldown,.dbox.done .dnext{animation:none}.theatre .bg,.speaker,.pick .face img{transition:none}}
 
 .mirror{position:fixed;inset:0;z-index:30;overflow-y:auto;overscroll-behavior:contain;visibility:hidden;
@@ -506,6 +517,24 @@ kbd{display:inline-grid;place-items:center;min-width:1.9em;height:1.9em;margin:0
       </div>
     </section>
 
+    <section class="f-sec" id="f-devlog" data-label="Devlog">
+      <div class="devlog">
+        <a class="shot devlog-link" href="#" aria-label="Read devlog #1 on itch.io">
+          <img src="assets/devlog1.png" width="1280" height="720" alt="Cain and Duncan on a cliff above the valley at dusk, torchlight on the rim and a lit window far below, beside the cover of the short story Through the Rift.">
+        </a>
+        <div>
+          <p class="kicker">Devlog #1</p>
+          <p class="big">A free short story, and the second demo.</p>
+          <p>Victor, the mage of Clifffall, catches a ten-year-old thief in his kitchen. <em>Through the Rift</em> is a short story from the world of Absolution, free to read in English and Hungarian. The second demo, the valley before the cave, is what comes next.</p>
+          <div class="actions"><a class="ink-btn devlog-link" href="#" data-ink="blot">Read the devlog</a></div>
+          <ul class="stories">
+            <li><a class="story-link" href="#">Through the Rift (English)</a></li>
+            <li><a class="story-link" href="#">A résen át (Magyar)</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
     <section class="f-sec cross" id="f-more" data-label="The other side ">
       <p class="kicker">Realmshift</p>
       <h2 class="h2">Switch over <em>to the other realm.</em></h2>
@@ -660,10 +689,14 @@ kbd{display:inline-grid;place-items:center;min-width:1.9em;height:1.9em;margin:0
 /* ---------- Edit these ---------- */
 const ITCH_URL = "https://zerex40.itch.io/absolution-knightfall";
 const DISCORD_URL = "https://discord.gg/DYwbZERv2";
+const DEVLOG_URL = "https://zerex40.itch.io/absolution-knightfall/devlog/1791994/a-free-short-story-and-the-second-demo";
+const STORY_URL = "https://zerex40.itch.io/absolution-knightfall#download";
 const CONTACT_EMAIL = atob("bW9jLmxpYW1nQG5pYW14ZXJleg==").split("").reverse().join("");
 /* -------------------------------- */
 
 document.querySelectorAll('.itch').forEach(a=>{a.href=ITCH_URL;a.target='_blank';a.rel='noopener';});
+document.querySelectorAll('.devlog-link').forEach(a=>{a.href=DEVLOG_URL;a.target='_blank';a.rel='noopener';});
+document.querySelectorAll('.story-link').forEach(a=>{a.href=STORY_URL;a.target='_blank';a.rel='noopener';});
 document.querySelectorAll('.discord').forEach(a=>{a.href=DISCORD_URL;a.target='_blank';a.rel='noopener';});
 ['mailLink','footMail'].forEach(id=>{const m=document.getElementById(id);m.href='mailto:'+CONTACT_EMAIL;m.textContent=CONTACT_EMAIL;});
 const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
